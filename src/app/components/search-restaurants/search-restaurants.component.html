@@ -1,0 +1,23 @@
+<div class="bookingFormContainer">
+    <form [formGroup]="restaurantBooking" class="bookingForm" (ngSubmit)="searchRestaurants(restaurantBooking.value)">
+      <table>
+        <tr>
+          <td><label>Restaurant:</label></td>
+          <td><input class="formField" type="text" formControlName="restaurant"></td>
+        </tr>
+        <tr>
+          <td><label>Amount of people:</label></td>
+          <td><input class="formField" type="number" formControlName="people"></td>
+        </tr>
+        <tr>
+          <td><label>Date:</label></td>
+          <td><input class="formField" type="date" formControlName="date"></td>
+        </tr>
+        <tr>
+          <td><label>Time:</label></td>
+          <td><input class="formField" type="datetime" formControlName="time"></td>
+        </tr>
+      </table>
+      <button type="submit">Search</button>
+    </form>
+  </div>
