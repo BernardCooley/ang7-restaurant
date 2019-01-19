@@ -1,0 +1,29 @@
+.resultsContainer {
+    width: 50%;
+    height: 130px;
+    margin: auto;
+    margin-top: 50px;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resultsMessage {
+    color: green;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+}
+
+input {
+    height: 25px;
+    width: 300px;
+    font-size: 15px;
+    border-radius: 5px;
+}

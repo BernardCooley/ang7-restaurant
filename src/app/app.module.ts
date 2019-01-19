@@ -8,6 +8,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SearchRestaurantsComponent } from './components/search-restaurants/search-restaurants.component';
 import { BookTableComponent } from './components/book-table/book-table.component';
 import { RestaurantResultsComponent } from './components/restaurant-results/restaurant-results.component';
+import { SearchService } from './services/searchService/search.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,9 +22,10 @@ import { RestaurantResultsComponent } from './components/restaurant-results/rest
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

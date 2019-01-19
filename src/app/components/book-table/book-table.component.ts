@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchService } from '../../services/searchService/search.service';
 
 @Component({
   selector: 'app-book-table',
@@ -6,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./book-table.component.scss']
 })
 export class BookTableComponent implements OnInit {
+  bookingData;
 
-  constructor() { }
+  constructor(private _searchService: SearchService) { }
 
-  getSearchData($event) {
-    console.log($event);
-    // this.message = $event
+  searchTables($event) {
+    this.bookingData = this._searchService.searchRestuarants($event);
   }
 
   ngOnInit() {

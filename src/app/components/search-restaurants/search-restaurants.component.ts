@@ -10,10 +10,10 @@ export class SearchRestaurantsComponent implements OnInit {
   @Output() sendFormData = new EventEmitter<string>();
 
   restaurantBooking = new FormGroup({
-    restaurant: new FormControl(''),
+    restaurantName: new FormControl(''),
     people: new FormControl(''),
     date: new FormControl(''),
-    time: new FormControl('')
+    meal: new FormControl('')
   });
 
   constructor() { }

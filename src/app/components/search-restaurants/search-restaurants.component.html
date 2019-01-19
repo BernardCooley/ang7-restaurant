@@ -3,7 +3,7 @@
       <table>
         <tr>
           <td><label>Restaurant:</label></td>
-          <td><input class="formField" type="text" formControlName="restaurant"></td>
+          <td><input class="formField" type="text" formControlName="restaurantName"></td>
         </tr>
         <tr>
           <td><label>Amount of people:</label></td>
@@ -15,7 +15,13 @@
         </tr>
         <tr>
           <td><label>Time:</label></td>
-          <td><input class="formField" type="datetime" formControlName="time"></td>
+          <td>
+            <select formControlName="meal">
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option>
+            </select>
+          </td>
         </tr>
       </table>
       <button type="submit">Search</button>

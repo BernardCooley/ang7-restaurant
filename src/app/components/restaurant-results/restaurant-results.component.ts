@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { SearchService } from '../../services/searchService/search.service';
 
 @Component({
   selector: 'app-restaurant-results',
@@ -7,7 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RestaurantResultsComponent implements OnInit {
 
-  constructor() { }
+  @Input() bookingData: Array<any> = [];
+  bookingName: string = '';
+
+  constructor(private _searchService: SearchService) {}
+
+  makeBooking() {
+    this.bookingData['bookingName'] = this.bookingName;
+
+    this._searchService.makeBooking(this.bookingData);
+  }
 
   ngOnInit() {
   }
